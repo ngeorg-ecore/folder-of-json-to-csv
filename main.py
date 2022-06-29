@@ -9,12 +9,12 @@ from os import listdir
 
 
 def create_csv_with_json():
-    files = listdir()
+    files = listdir("jsons")
 
     list_of_csv = []
     for file in files:
         if file.endswith(".json"):
-            with open(file, "r") as file:
+            with open("jsons/" + file, "r") as file:
                 jsfile = json.load(file)
                 list_of_csv.append(jsfile)
 
