@@ -19,8 +19,8 @@ def create_csv_with_json():
                 list_of_csv.append(jsfile)
 
     csv = pd.DataFrame(list_of_csv)
-    print(csv)
 
+    csv.to_csv("output.csv", index=False)
 
 if __name__ == '__main__':
     create_csv_with_json()
